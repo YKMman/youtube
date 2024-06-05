@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import {useState} from "react";
 
-export const App = (): React.JSX.Element => {
+export const App = (): JSX.Element => {
   const [count, setCount] = useState(0);
 
   const handlePlus = (): void => {
