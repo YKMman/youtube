@@ -1,85 +1,24 @@
-//{
-//  "env": {
-//    "browser": true,
-//    "es2021": true,
-//    "node": true
-//  },
-//  "extends": [
-//    "eslint:recommended",
-//    "plugin:react/recommended",
-//    "plugin:react-hooks/recommended",
-//    "plugin:@typescript-eslint/recommended",
-//    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-//    "prettier"
-//  ],
-//  "parser": "@typescript-eslint/parser",
-//  "parserOptions": {
-//    "ecmaFeatures": {
-//      "jsx": true
-//    },
-//    "ecmaVersion": 12,
-//    "project": [
-//      "./tsconfig.json"
-//    ],
-//    "sourceType": "module"
-//  },
-//  "plugins": [
-//    "react",
-//    "react-hooks",
-//    "@typescript-eslint"
-//  ],
-//  "rules": {
-//    "indent": [
-//      "error",
-//      2
-//    ],
-//    "linebreak-style": [
-//      "error",
-//      "unix"
-//    ],
-//    "quotes": [
-//      "error",
-//      "single"
-//    ],
-//    "semi": [
-//      "error",
-//      "always"
-//    ],
-//    "no-console": [
-//      "warn",
-//      {
-//        "allow": [
-//          "error",
-//          "warn"
-//        ]
-//      }
-//    ],
-//    "react/react-in-jsx-scope": "off",
-//    "react/jsx-filename-extension": [
-//      1,
-//      {
-//        "extensions": [
-//          ".jsx",
-//          ".tsx"
-//        ]
-//      }
-//    ],
-//    "@typescript-eslint/explicit-module-boundary-types": "off",
-//    "@typescript-eslint/no-explicit-any": "off",
-//    "@typescript-eslint/ban-ts-comment": "off"
-//  },
-//  "settings": {
-//    "react": {
-//      "version": "detect"
-//    }
-//  }
-//}
-//
-////
-////env - указывает окружение, в котором будет выполняться код. В этом случае используется browser, es2021 и node.
-////extends - указывает набор правил, которые будут использоваться для проверки кода. В этом случае используются рекомендуемые правила ESLint, рекомендуемые правила для React и TypeScript, а также правила для Prettier.
-////parser - указывает парсер, который будет использоваться для анализа кода. В этом случае используется @typescript-eslint/parser.
-////parserOptions - указывает настройки для парсера. В этом случае используется ecmaVersion: 12 для поддержки новой спецификации ECMAScript, jsx: true для поддержки JSX, и project: ["./tsconfig.json"] для использования конфигурации TypeScript.
-////plugins - указывает набор плагинов, которые будут использоваться для проверки кода. В этом случае используются плагины для React, TypeScript и React Hooks.
-////rules - указывает набор правил, которые будут использоваться для проверки кода. В этом случае используются правила для отступов, кавычек, точек с запятой, запрета на использование console.log, а также настройки для React и TypeScript.
-////settings - указывает настройки для плагинов. В этом случае используется react.version: "detect" для автоматического определения версии React.
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard-with-typescript",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "eslint:recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "@typescript-eslint/triple-slash-reference": "off"
+  }
+}
