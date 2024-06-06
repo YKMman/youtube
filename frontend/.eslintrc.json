@@ -21,7 +21,7 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "testing-library", "jest"],
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
@@ -30,7 +30,11 @@
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "testing-library/await-async-queries": "error",
+		"testing-library/no-await-sync-queries": "error",
+		"testing-library/no-debugging-utils": "warn",
+		"testing-library/no-dom-import": "off"
   },
   "settings": {
     "react": {
