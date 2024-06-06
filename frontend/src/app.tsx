@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 
 export const App = (): JSX.Element => {
   const [count, setCount] = useState(0);
