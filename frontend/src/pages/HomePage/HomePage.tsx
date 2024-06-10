@@ -16,6 +16,7 @@ export const App = (): JSX.Element => {
       <button onClick={handlePlus}>plus</button>
       <button onClick={handleMinus}>minus</button>
       <span>{count}</span>
+      <img src="https://media.kg-portal.ru/anime/k/k/images/k_33.jpg" />
     </div>
   );
 };

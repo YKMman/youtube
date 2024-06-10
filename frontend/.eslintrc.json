@@ -19,12 +19,12 @@
     },
     "ecmaVersion": 12,
     "sourceType": "module",
-    "project": ["./tsconfig.json"]
+    "project": true,
+    "tsconfigRootDir": "frontend/"
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "testing-library", "jest"],
   "rules": {
     "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
     "react/react-in-jsx-scope": "off",
@@ -41,5 +41,5 @@
       "version": "detect"
     }
   },
-  "ignorePatterns": ["node_modules", "dist"]
+  "ignorePatterns": ["node_modules", "dist", "webpack.config.ts", "config"]
 }
