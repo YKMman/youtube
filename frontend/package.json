@@ -9,7 +9,8 @@
     "dev": "webpack serve",
     "lint": "eslint src/**/*.ts[x]",
     "lint:fix": "eslint --fix src/**/*.ts[x]",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "analyzer": "webpack --env analyzer=true"
   },
   "keywords": [],
   "author": "",
