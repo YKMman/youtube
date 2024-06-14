@@ -26,7 +26,7 @@ export function buildWebpack (options:BuildOptions) :webpack.Configuration {
             filename: '[name].[contenthash].js',
             clean: true,
             // указываем название каждого чанка
-            chunkFilename: '[name].[contenthash].js',
+            // chunkFilename: '[name].[contenthash].js',
         },
         module: {
             rules: loaderConfig(options),

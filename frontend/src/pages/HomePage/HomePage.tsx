@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import * as classes from "./home.module.scss";
+
 export const App = (): JSX.Element => {
   const [count, setCount] = useState(0);
 
@@ -12,7 +14,7 @@ export const App = (): JSX.Element => {
   };
 
   return (
-    <div>
+    <div className={classes.page}>
       <button onClick={handlePlus}>plus</button>
       <button onClick={handleMinus}>minus</button>
       <span>{count}</span>

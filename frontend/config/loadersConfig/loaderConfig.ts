@@ -12,29 +12,25 @@ export default function loaderConfig (options: BuildOptions): ModuleOptions['rul
     const isProd = options.mode === 'production'
 
 
-    const cssLoader = {
-        loader: 'css-loader',
+    const cssLoaderWithModules = {
+        loader: "css-loader",
         options: {
-            sourceMap: true,
             modules: {
-                localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]'
-            }
-        }
+                localIdentName: isDev ? "[path][name]__[local]" : "[hash:base64:8]",
+            },
+          },
     }
 
-    const sassLoader = {
-        loader: 'sass-loader',
-        options: {
-        sourceMap: true,
-        sassOptions: {
-            outputStyle: "compressed",
-        },
-        },
-    }
-
-    const styleLoader = {
-    // в дев режиме лучше использовать style-loader, а для продакшена miniCss
-        loader: isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 
+    const scssLoader = {
+        test: /\.s[ac]ss$/i,
+        use: [
+            // Creates `style` nodes from JS strings
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            // Translates CSS into CommonJS
+            cssLoaderWithModules,
+            // Compiles Sass to CSS
+            "sass-loader",
+        ],
     }
 
     const tsLoader = {
@@ -64,14 +60,34 @@ export default function loaderConfig (options: BuildOptions): ModuleOptions['rul
         type: 'asset/resource',
     }
 
+    // const svgrLoader = {
+    //     test: /\.svg$/i,
+    //     use: [
+    //         {
+    //             loader: '@svgr/webpack',
+    //             options: {
+    //                 icon: true,
+    //                 svgoConfig: {
+    //                     plugins: [
+    //                         {
+    //                             name: 'convertColors',
+    //                             params: {
+    //                                 currentColor: true,
+    //                             }
+    //                         }
+    //                     ]
+    //                 }
+    //             }
+    //         }
+    //     ],
+    // }
+
     
     return [
-        {
-            test: /\.s[ac]ss$/i,
-            use: [ styleLoader, cssLoader, sassLoader ],
-        },
+        scssLoader,
         imagesLoader,
         fontsLoader,
-        tsLoader
+        tsLoader,
+        // svgrLoader
     ]
 }
