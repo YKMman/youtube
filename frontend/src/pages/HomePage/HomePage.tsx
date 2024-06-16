@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import * as classes from "./home.module.scss";
+// import * as classes from "./home.module.scss";
 
-export const App = (): JSX.Element => {
+const HomePage = (): JSX.Element => {
   const [count, setCount] = useState(0);
 
   const handlePlus = (): void => {
@@ -14,7 +14,7 @@ export const App = (): JSX.Element => {
   };
 
   return (
-    <div className={classes.page}>
+    <div >
       <button onClick={handlePlus}>plus</button>
       <button onClick={handleMinus}>minus</button>
       <span>{count}</span>
@@ -22,3 +22,5 @@ export const App = (): JSX.Element => {
     </div>
   );
 };
+
+export default HomePage;

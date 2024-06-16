@@ -16,8 +16,8 @@ export default function pluginsConfig({mode, paths, analyzer}: BuildOptions): Co
         new HtmlWebpackPlugin({
             title: 'My app',
             template: paths.html,
-            minify: true,
-            hash: true,
+            // minify: true,
+            // hash: true,
             showErrors: true,
             // favicon: './public/я.jpg'
         }),

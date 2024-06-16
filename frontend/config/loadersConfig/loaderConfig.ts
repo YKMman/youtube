@@ -16,7 +16,7 @@ export default function loaderConfig (options: BuildOptions): ModuleOptions['rul
         loader: "css-loader",
         options: {
             modules: {
-                localIdentName: isDev ? "[path][name]__[local]" : "[hash:base64:8]",
+                localIdentName: isDev ? "[local]" : "[hash:base64:8]",
             },
           },
     }
