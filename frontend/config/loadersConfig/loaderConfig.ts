@@ -12,11 +12,13 @@ export default function loaderConfig (options: BuildOptions): ModuleOptions['rul
     const isProd = options.mode === 'production'
 
 
+
     const cssLoaderWithModules = {
         loader: "css-loader",
         options: {
             modules: {
-                localIdentName: isDev ? "[local]" : "[hash:base64:8]",
+                auto: true,
+                localIdentName: isDev ? "[path][local]" : "[hash:base64:8]",
             },
           },
     }

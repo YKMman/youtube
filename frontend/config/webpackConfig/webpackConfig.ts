@@ -23,10 +23,7 @@ export function buildWebpack (options:BuildOptions) :webpack.Configuration {
         entry: paths.entry,
         output: {
             path: paths.output,
-            filename: '[name].[contenthash].js',
             clean: true,
-            // указываем название каждого чанка
-            // chunkFilename: '[name].[contenthash].js',
         },
         module: {
             rules: loaderConfig(options),
