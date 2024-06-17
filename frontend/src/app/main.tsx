@@ -8,8 +8,6 @@ import { Layout } from "../pages";
 
 const root = document.getElementById("root");
 
-console.log(root);
-
 if (root != null) {
   const container = createRoot(root);
   container.render(

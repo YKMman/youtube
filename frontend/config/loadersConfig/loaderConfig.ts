@@ -10,9 +10,7 @@ export default function loaderConfig (options: BuildOptions): ModuleOptions['rul
 
     const isDev = options.mode === 'development'
     const isProd = options.mode === 'production'
-
-
-
+    
     const cssLoaderWithModules = {
         loader: "css-loader",
         options: {

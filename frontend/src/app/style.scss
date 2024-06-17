@@ -1,13 +1,5 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html,
-body{
-  height: 100%;
-}
+@import url('./styles/variables.scss');
+@import url('./styles/null.scss');
 
 #root{
   height: 100%;
