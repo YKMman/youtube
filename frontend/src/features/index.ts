@@ -1,3 +1,4 @@
 import RegistrationForm from "./RegistrationForm/RegistrationForm";
+import Search from "./Search/Search";
 
-export { RegistrationForm };
+export { RegistrationForm, Search };
