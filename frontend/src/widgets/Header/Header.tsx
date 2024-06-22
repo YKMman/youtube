@@ -1,11 +1,18 @@
-import * as classes from './header.module.scss'
+import { Link } from "react-router-dom";
+
+import { Logo } from "../../entities";
+import { Search } from "../../features";
+import "./HeaderStyles.scss";
 
 const Header = () => {
   return (
-    <header>
-      header
-    </header>
-  )
-}
+    <header className="header">
+      <Logo />
+      <Search />
 
-export default Header
+      <Link to="#" className="header__avatar"></Link>
+    </header>
+  );
+};
+
+export default Header;
