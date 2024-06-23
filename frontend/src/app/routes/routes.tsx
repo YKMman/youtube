@@ -1,17 +1,27 @@
 import { createBrowserRouter } from "react-router-dom";
-import { AuthorizationPage, HomePage, RegistrationPage } from "../../pages";
+import {
+  AuthorizationPage,
+  HomePage,
+  Layout,
+  RegistrationPage,
+} from "../../pages";
+import React from "react";
 
 export const routes = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: (
+      <Layout>
+        <HomePage />
+      </Layout>
+    ),
   },
   {
-    path: "registration",
+    path: "/registration",
     element: <RegistrationPage />,
   },
   {
-    path: "authorization",
+    path: "/authorization",
     element: <AuthorizationPage />,
   },
 ]);

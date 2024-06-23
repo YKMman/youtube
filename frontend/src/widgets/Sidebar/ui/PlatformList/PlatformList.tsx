@@ -6,7 +6,7 @@ const PlatformList = () => {
     <div className="navbar__row">
       <ul className="navbar__row-list navbar-list">
         <li className="navbar-list__item">
-          <Link to="#" className="navbar-list__link">
+          <Link to="/" className="navbar-list__link">
             <div className="navbar-list__icon">
               <svg
                 width="16"
@@ -25,7 +25,7 @@ const PlatformList = () => {
           </Link>
         </li>
         <li className="navbar-list__item">
-          <Link to="#" className="navbar-list__link">
+          <Link to="/" className="navbar-list__link">
             <div className="navbar-list__icon">
               <svg
                 width="16"
@@ -46,7 +46,7 @@ const PlatformList = () => {
           </Link>
         </li>
         <li className="navbar-list__item">
-          <Link to="#" className="navbar-list__link">
+          <Link to="/" className="navbar-list__link">
             <div className="navbar-list__icon">
               <svg
                 width="18"

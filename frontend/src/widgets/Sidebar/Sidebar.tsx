@@ -1,4 +1,4 @@
-import "./SidebarStyles.scss";
+// import "./SidebarStyles.scss";
 import { PlatformList, SubscribesList, UserList } from "./ui";
 
 const Sidebar = () => {

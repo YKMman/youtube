@@ -7,3 +7,5 @@ tsconfig.json
 webpack.config.js
 .prettierrc.json
 public
+tailwind.config.js
+postcss.config.js

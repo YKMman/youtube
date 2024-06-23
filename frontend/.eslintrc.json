@@ -41,5 +41,5 @@
       "version": "detect"
     }
   },
-  "ignorePatterns": ["node_modules", "dist", "webpack.config.ts", "config", "global.d.ts"]
+  "ignorePatterns": ["node_modules", "dist", "webpack.config.ts", "config", "global.d.ts", "tailwind.config.js", "postcss.config.js"]
 }

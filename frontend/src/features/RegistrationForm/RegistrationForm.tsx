@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 
-import * as classes from "./registrationForm.module.scss";
+// import * as classes from "./registrationForm.module.scss";
 
 import { Inputs } from "./types";
 import { apiRegistration } from "./api";
@@ -27,7 +27,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("name", { required: true })} placeholder="name" />
 
       <input {...register("email", { required: true })} placeholder="email" />

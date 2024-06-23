@@ -10,27 +10,17 @@ export default function loaderConfig (options: BuildOptions): ModuleOptions['rul
 
     const isDev = options.mode === 'development'
     const isProd = options.mode === 'production'
-    
-    const cssLoaderWithModules = {
-        loader: "css-loader",
-        options: {
-            modules: {
-                auto: true,
-                localIdentName: isDev ? "[path][local]" : "[hash:base64:8]",
-            },
-          },
-    }
+
+
 
     const scssLoader = {
-        test: /\.s[ac]ss$/i,
+        test: /\.css$/i,
         use: [
-            // Creates `style` nodes from JS strings
-            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-            // Translates CSS into CommonJS
-            cssLoaderWithModules,
-            // Compiles Sass to CSS
-            "sass-loader",
+            'style-loader',
+            'css-loader',
+            'postcss-loader',
         ],
+        exclude: /node_modules/,
     }
 
     const tsLoader = {

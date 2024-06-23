@@ -1,5 +1,5 @@
 import { Registration } from "../../widgets";
-import * as classes from "./registration.module.scss";
+// import * as classes from "./registration.module.scss";
 
 const RegistrationPage = () => {
   return (

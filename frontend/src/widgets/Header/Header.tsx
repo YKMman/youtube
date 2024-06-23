@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { Logo } from "../../entities";
 import { Search } from "../../features";
-import "./HeaderStyles.scss";
+// import "./HeaderStyles.scss";
 
 const Header = () => {
   return (
