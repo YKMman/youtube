@@ -1,9 +1,8 @@
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
-
-import "./style.css";
-
 import { routes } from "./routes/routes";
+
+import "./index.css";
 
 const root = document.getElementById("root");
 

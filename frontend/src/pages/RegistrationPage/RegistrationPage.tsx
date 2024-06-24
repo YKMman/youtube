@@ -1,14 +1,5 @@
-import { Registration } from "../../widgets";
-// import * as classes from "./registration.module.scss";
-
 const RegistrationPage = () => {
-  return (
-    <section className={classes.page}>
-      <div className={`${classes.container} container`}>
-        <Registration />
-      </div>
-    </section>
-  );
+  return <div className="bg-black">registration</div>;
 };
 
 export default RegistrationPage;

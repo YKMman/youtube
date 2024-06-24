@@ -1,7 +1,6 @@
 import { ModuleOptions } from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-
 import { BuildOptions } from "../types";
 
 
@@ -13,12 +12,19 @@ export default function loaderConfig (options: BuildOptions): ModuleOptions['rul
 
 
 
-    const scssLoader = {
+    const cssLoader = {
         test: /\.css$/i,
         use: [
             'style-loader',
-            'css-loader',
-            'postcss-loader',
+            {
+                loader: 'css-loader',
+                // options: {
+                //     importLoaders: 1,
+                // }
+            },
+            {
+                loader: 'postcss-loader', // postcss loader needed for tailwindcss
+            },
         ],
         exclude: /node_modules/,
     }
@@ -74,7 +80,7 @@ export default function loaderConfig (options: BuildOptions): ModuleOptions['rul
 
     
     return [
-        scssLoader,
+        cssLoader,
         imagesLoader,
         fontsLoader,
         tsLoader,

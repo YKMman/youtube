@@ -1,4 +1,0 @@
-1) style-loader non to PROD. only DEV
-2) Необходимо чтобы ксс сжимался в PROD, разделялся в DEV
-3) Typescript optimization
-4)

@@ -29,10 +29,11 @@ export default function pluginsConfig({mode, paths, analyzer}: BuildOptions): Co
 
     if (isProd) {
         plugins.push(new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css",
+            filename: 'styles/[name].[contenthash].css',
+            chunkFilename: '[id].css',
         }))
     }
+
 
     return plugins
 }

@@ -12,6 +12,8 @@ export default (env: EnvVariables) => {
     html: path.resolve(__dirname, 'public', 'index.html')
   }
 
+  console.log(paths)
+
   const config: webpack.Configuration = buildWebpack({
     port: env.port ?? 3000,
     mode: env.mode ?? 'development',

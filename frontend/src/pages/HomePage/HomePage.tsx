@@ -1,7 +1,5 @@
-// import styles from "./home.module.scss";
-
-const HomePage = (): JSX.Element => {
-  return <section className="w-full bg-black">text</section>;
+const HomePage = () => {
+  return <div>home page</div>;
 };
 
 export default HomePage;

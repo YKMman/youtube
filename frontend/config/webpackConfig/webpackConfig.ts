@@ -19,11 +19,13 @@ export function buildWebpack (options:BuildOptions) :webpack.Configuration {
 
     return {
         mode: mode ?? 'development',
-        devtool: 'inline-source-map',
+        devtool: isDev ? 'eval-cheap-module-source-map' : 'source-map',
         entry: paths.entry,
         output: {
             path: paths.output,
+            filename: '[name].[contenthash].js',
             clean: true,
+            // publicPath: '/'
         },
         module: {
             rules: loaderConfig(options),
