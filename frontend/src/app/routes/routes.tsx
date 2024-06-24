@@ -1,13 +1,21 @@
 import { createBrowserRouter } from "react-router-dom";
-import { HomePage, RegistrationPage } from "../../pages";
+import { HomePage, Layout, RegistrationPage } from "../../pages";
 
 export const routes = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: (
+      <Layout>
+        <HomePage />,
+      </Layout>
+    ),
   },
   {
     path: "registration",
-    element: <RegistrationPage />,
+    element: (
+      <Layout>
+        <RegistrationPage />
+      </Layout>
+    ),
   },
 ]);
