@@ -3,9 +3,9 @@ import { Footer, Header } from "../../widgets";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
+    <div className="min-h-full flex flex-col">
       <Header />
-      <main>{children}</main>
+      <main className="flex-auto">{children}</main>
       <Footer />
     </div>
   );

@@ -1,4 +1,5 @@
 import HomePage from "./HomePage/HomePage";
-import RegistrationPage from "./RegistrationPage/RegistrationPage";
 import Layout from "./Layout/Layout";
+import RegistrationPage from "./RegistrationPage/RegistrationPage";
+
 export { HomePage, RegistrationPage, Layout };

@@ -20,7 +20,7 @@
     "ecmaVersion": 12,
     "sourceType": "module",
     "project": true,
-    "tsconfigRootDir": "frontend/"
+    "tsconfigRootDir": "./"
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "testing-library", "jest"],
   "rules": {

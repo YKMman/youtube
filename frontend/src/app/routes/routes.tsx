@@ -1,7 +1,7 @@
-import { createBrowserRouter } from "react-router-dom";
-import { HomePage, Layout, RegistrationPage } from "../../pages";
+import { HomePage, Layout, RegistrationPage } from "pages";
+import { createMemoryRouter } from "react-router-dom";
 
-export const routes = createBrowserRouter([
+export const routes = createMemoryRouter([
   {
     path: "/",
     element: (

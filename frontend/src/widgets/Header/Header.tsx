@@ -1,7 +1,5 @@
-import React from "react";
-
 const Header = () => {
-  return <div>header</div>;
+  return <header className="bg-black">header</header>;
 };
 
 export default Header;
